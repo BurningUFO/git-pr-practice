@@ -13,7 +13,12 @@ def divide(a, b):
 
     返回:
         float，即 a / b 的结果。
+
+    Raises:
+        ValueError: 当 b 为 0 时。
     """
+    if b == 0:
+        raise ValueError("除数不能为 0")
     return a / b
 
 

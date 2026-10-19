@@ -23,6 +23,14 @@ class DivideTest(unittest.TestCase):
     def test_float_operands(self):
         self.assertAlmostEqual(divide(1.5, 0.5), 3.0)
 
+    def test_zero_divisor_raises(self):
+        with self.assertRaises(ValueError):
+            divide(1, 0)
+
+    def test_zero_divided_by_zero_raises(self):
+        with self.assertRaises(ValueError):
+            divide(0, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
